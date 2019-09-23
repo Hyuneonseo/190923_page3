@@ -1,0 +1,1027 @@
+<style type="text/css">
+    * { box-sizing: border-box; }
+
+    body{overflow: hidden;}
+    
+a:link, a:active, a:visited {
+  color: black;
+  text-decoration: none;
+}
+a:hover{color: orangered;}
+
+span:link, span:active, span:visited {
+  color: white;
+  text-decoration: none;
+}
+span:hover{color: black; background-color: white;}
+
+span{cursor: pointer;}
+
+input[type=text] {
+  background-color: transparent;
+  height: 45px;
+  width: 300px;
+  box-sizing: border-box;
+  font-weight: 700;
+  z-index: 999;
+  color: black;
+  font-size: 1em;
+  border: none;
+}
+
+input::placeholder {
+  color: black;
+}
+
+input[type=submit] {
+  background-color: transparent;
+  color: black;
+  height: 40px;
+  width: 223px;
+  font-size: 1em;
+  line-height: 1em;
+  border: 0px solid black;
+  border-radius: 4px;
+  cursor: pointer;
+  z-index: 999;
+  font-weight: 700;
+  text-align: left;
+}
+
+input[type=submit]:hover {
+  
+  color: white;
+}
+
+.mbar{position: fixed; top: 0px; left: 0px; width: 100%; height: 50px; font-family: 'Noto Sans KR', sans-serif; 
+font-weight: 600; font-size: 1.7em; line-height: 1.7em; border-bottom: 1px solid black; overflow: hidden; text-align: center;
+color: white;}
+.bfbt{position: relative; top: 0px; left: 5px; float: left;} 
+.nwbt{ margin: auto; text-align: center;}
+
+.nxbt{position: absolute; top: 0px; right: 5px; float: right;}
+.mbar2{position: fixed; top: 50px; left: 0px; width: 100%; height: 50px; font-family: 'Noto Sans KR', sans-serif; 
+font-weight: 600; font-size: 1.7em; line-height: 1.7em; background-color: white; border-bottom: 1px solid black;}
+
+#roim{visibility: hidden; position: absolute; top: 100px; left: 0px; width: 100%;}
+
+#snr{visibility: hidden;}
+
+#snr3{visibility: hidden;}
+
+.mrq{text-align: center;}
+
+#nname{position: absolute; float: right; right: 2px; line-height: 1em; text-align: right;}
+#rname{position: absolute; float: left; left: 2px; line-height: 1em;}
+#nsbt{position: absolute; left: 350px; line-height: 1em; top: 5px;}
+#rsbt{position: absolute; right: 2px; line-height: 1em; top: 5px;}
+.button {
+  display: inline-block;
+  height: 30px;
+  
+  border-left: 1px solid black;
+
+  
+  color: #222;
+  font-family: sans-serif;
+  font-size: 16px;
+  
+  cursor: pointer;
+  background-color: none;
+}
+
+.button:hover {
+  background-color: yellow;
+  
+  color: #222;
+}
+
+.button:active,
+.button.is-checked {
+  background-color: black;
+}
+
+.button.is-checked {
+  color: white;
+  
+}
+
+.button:active {
+  
+}
+
+/* ---- button-group ---- */
+
+.button-group:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.button-group .button {
+  float: left;
+  border-radius: 0;
+  margin-left: 0;
+  margin-right: 0px;
+  border-left: 1px solid black;
+}
+
+.button-group .button {  }
+
+
+/* ---- isotope ---- */
+
+.grid {
+  
+  max-width: 1400px;
+}
+
+/* clear fix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ui group */
+
+.ui-group {
+  display: inline-block;
+}
+
+.ui-group h3 {
+  display: inline-block;
+  margin-right: 0.2em;
+  font-size: 16px;
+}
+
+.ui-group .button-group {
+  display: inline-block;
+  margin-right: 0px;
+}
+
+/* all */
+.all{line-height: 2.3em;
+  text-align: center; width: 60px; height: 40px; margin: 5px; float: left; background-color: white; border:1px solid black; cursor: pointer;}
+
+.all1
+.red {background-color: red;}
+.blue {background-color: #2456ff; color: white;}
+.skyb {background-color: #07c6c7;}
+.green {background-color: #74a60a;}
+.yell {background-color: #f2e205;}
+
+.all2
+.road {width: 100px;}
+.sky {width: 100px; height: 70px; border-radius: 50%;}
+.ocean {background: #ff433e;
+      width: 50px;
+      height: 50px;
+      position: relative;
+      text-align: center;
+      border:none;}
+.ocean:before,
+.ocean:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 50px;
+      width: 50px;
+      background: #ff433e;
+      z-index: -999;
+    }
+.ocean:before {
+      transform: rotate(30deg);
+    }
+.ocean:after {
+      transform: rotate(60deg);
+    }
+.mount 
+
+.all3
+.spr
+.sum
+.aut
+.wint
+
+.all4
+.book
+.trip
+
+
+
+.nohow{font-size: 7em; font-weight: 700; position: fixed; bottom: -20px; right: 20px;
+cursor: pointer;}
+#nhct{width: 500px; height: 650px; background-color: white; border: 1px solid black;
+position: fixed; top: 0px; right: 0px; display: none; padding: 10px; 
+float: left; overflow: hidden;
+animation-name: wnhct; animation-duration: 1s; animation-timing-function: steps(20);}
+
+#another1{width: 320px; height: 100px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffee; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+#another2{width: 400px; height: 140px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeea; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+#another3{width: 400px; height: 140px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeeb; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+#another4{width: 240px; height: 100px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeec; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;} 
+#another5{width: 320px; height: 140px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeed; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+#another6{width: 300px; height: 140px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeee; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+#another7{width: 300px; height: 140px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeef; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+#another8{width: 300px; height: 140px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeeg; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+#another9{width: 240px; height: 280px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeeh; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+#another10{width: 290px; height: 230px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeei; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+#another11{width: 240px; height: 270px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeej; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+
+#another12{width: 300px; height: 230px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; right: 0px; animation-name: coffeek; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+
+#another13{width: 300px; height: 190px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeek;
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden; right: 0px;}
+
+#another14{width: 305px; height: 230px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeek; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden; right: 0px;}
+
+#another15{width: 360px; height: 230px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeek; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden; right: 0px;}
+
+#another16{width: 275px; height: 310px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeek; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+
+#another17{width: 300px; height: 185px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeek; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden; right: 0px;}
+
+#another18{width: 370px; height: 140px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeek; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+
+#another19{width: 295px; height: 230px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeek; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+
+#another20{width: 275px; height: 185px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeek; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+
+#another21{width: 315px; height: 190px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeek; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+
+#another22{width: 285px; height: 400px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeek; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+
+#another23{width: 275px; height: 140px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeek; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+
+#another24{width: 275px; height: 140px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeek; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+
+#another25{width: 275px; height: 185px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeek; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden; left: 0px;}
+
+#another26{width: 275px; height: 235px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeek; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden; top: 0px;}
+
+#another27{width: 295px; height: 270px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeek; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+
+#another28{width: 275px; height: 230px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeek; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+
+#another29{width: 295px; height: 140px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeek; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+
+#another30{width: 275px; height: 140px; right: 0px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeek; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+
+#another31{width: 275px; height: 185px; right: 0px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeek; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+
+#another32{width: 275px; height: 315px; right: 0px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeek; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+
+#another33{width: 300px; height: 185px; right: -180%; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeek; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+
+#another34{width: 295px; height: 140px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeek; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+
+#another35{width: 275px; height: 185px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeek; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+
+#another36{width: 275px; height: 310px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeek; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden; right: 0px;}
+
+#another37{width: 275px; height: 140px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeek; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden; right: 0px;}
+
+#another38{width: 275px; height: 185px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeek; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+
+#another39{width: 275px; height: 180px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeek; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden; right: 0px;}
+
+#another40{width: 275px; height: 140px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeek; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+
+#another41{width: 275px; height: 140px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeek; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+
+#another42{width: 275px; height: 140px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeek; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+
+#another43{width: 275px; height: 185px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeek; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+
+#another44{width: 275px; height: 140px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeek; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+
+#another45{width: 275px; height: 140px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeek; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+
+#another46{width: 275px; height: 180px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeek; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+
+#another47{width: 275px; height: 140px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeek; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+
+#another48{width: 275px; height: 185px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeek; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden; right: 0px;}
+
+#another49{width: 275px; height: 140px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeek; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+
+#another50{width: 275px; height: 185px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeek; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+
+#another51{width: 340px; height: 140px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffee; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+
+#another52{width: 300px; height: 140px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeea; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden; right: -140px;}
+
+#another53{width: 320px; height: 185px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeeb; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden; right: -140px;}
+
+#another54{width: 260px; height: 140px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeec; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;} 
+
+#another55{width: 320px; height: 185px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeed; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+
+#another56{width: 300px; height: 140px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeee; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+
+#another57{width: 300px; height: 140px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeef; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+
+#another58{width: 300px; height: 140px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeeg; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden; right: 0px;}
+
+#another59{width: 240px; height: 140px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeeh; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+
+#another60{width: 290px; height: 130px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeei; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+
+#another61{width: 320px; height: 120px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffee; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+
+#another62{width: 400px; height: 120px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeea; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+
+#another63{width: 400px; height: 120px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeeb; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+
+#another64{width: 240px; height: 160px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeec; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;} 
+
+#another65{width: 320px; height: 120px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeed; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+
+#another66{width: 260px; height: 160px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeee; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+
+#another67{width: 300px; height: 200px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeef; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+
+#another68{width: 300px; height: 160px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeeg; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+
+#another69{width: 240px; height: 160px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeeh; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+
+#another70{width: 290px; height: 160px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeei; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden; right: 0px;}
+
+#another71{width: 320px; height: 120px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffee; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+
+#another72{width: 400px; height: 120px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeea; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+
+#another73{width: 400px; height: 120px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeeb; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden; right: 0px;}
+
+#another74{width: 240px; height: 180px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeec; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+
+#another75{width: 320px; height: 130px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeed; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden; right: 0px;}
+
+#another76{width: 300px; height: 200px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeee; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden; right: 0px;}
+
+#another77{width: 300px; height: 120px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeef; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+
+#another78{width: 300px; height: 200px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeeg; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+
+#another79{width: 240px; height: 130px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeeh; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+
+#another80{width: 290px; height: 160px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeei; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+
+#another81{width: 320px; height: 200px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffee; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+
+#another82{width: 400px; height: 120px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeea; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+
+#another83{width: 400px; height: 160px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeeb; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+
+#another84{width: 240px; height: 230px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeec; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;} 
+
+#another85{width: 320px; height: 130px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeed; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+
+#another86{width: 300px; height: 120px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeee; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden; right: 0px;}
+
+#another87{width: 300px; height: 160px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeef; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden; right: 0px;}
+
+#another88{width: 300px; height: 120px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeeg; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+
+#another89{width: 240px; height: 170px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeeh; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+
+#another90{width: 290px; height: 170px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeei; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+
+#another91{width: 320px; height: 230px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffee; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden; right: 0px;}
+
+#another92{width: 400px; height: 120px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeea; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden; right: 0px;}
+
+#another93{width: 400px; height: 120px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeeb; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden; right: 0px;}
+
+#another94{width: 280px; height: 160px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeec; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden; right: 0px;}
+
+#another95{width: 320px; height: 160px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeed; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden; right: 0px;}
+
+#another96{width: 300px; height: 160px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeee; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden; right: 0px;}
+
+#another97{width: 300px; height: 120px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeef; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden; right:0px;}
+
+#another98{width: 300px; height: 160px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeeg; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+
+#another99{width: 240px; height: 200px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeeh; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+
+#another100{width: 290px; height: 170px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeei; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+
+#another101{width: 320px; height: 130px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffee; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+
+#another102{width: 400px; height: 120px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeea; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+
+#another103{width: 400px; height: 120px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeeb; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+
+#another104{width: 240px; height: 130px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeec; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;} 
+
+#another105{width: 320px; height: 130px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeed; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+
+#another106{width: 300px; height: 120px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeee; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+
+#another107{width: 300px; height: 120px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeef; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+
+#another108{width: 300px; height: 120px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeeg; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden; right: 0px;}
+
+#another109{width: 240px; height: 170px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeeh; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden; right: 0px;}
+
+#another110{width: 290px; height: 210px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeei; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden; right: 0px;}
+
+#another111{width: 320px; height: 130px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffee; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+
+#another112{width: 400px; height: 120px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeea; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden; right: 0px;}
+
+#another113{width: 400px; height: 120px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeeb; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+
+#another114{width: 240px; height: 200px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeec; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;} 
+
+#another115{width: 320px; height: 170px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeed; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+
+#another116{width: 300px; height: 120px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeee; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+
+#another117{width: 300px; height: 240px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeef; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+
+#another118{width: 300px; height: 190px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeeg; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden; right: 0px;}
+
+#another119{width: 240px; height: 250px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeeh; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+
+#another120{width: 290px; height: 130px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeei; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+
+#another121{width: 320px; height: 130px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffee; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+
+#another122{width: 400px; height: 190px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeea; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+
+#another123{width: 400px; height: 120px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeeb; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+
+#another124{width: 240px; height: 180px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeec; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;} 
+
+#another125{width: 400px; height: 160px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeed; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+
+#another126{width: 400px; height: 190px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeee; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+
+#another127{width: 300px; height: 120px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeef; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+
+#another128{width: 400px; height: 220px; margin: auto; z-index: 999; position: absolute; top: 0px; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeeg; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+
+#another129{width: 340px; height: 170px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeeh; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden;}
+
+#another130{width: 350px; height: 230px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeei; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden; right: 0px;}
+
+#another131{width: 400px; height: 160px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffee; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden; right: 0px;}
+
+#another132{width: 400px; height: 120px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeea; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden; right: 0px;}
+
+#another133{width: 400px; height: 120px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeeb; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden; right: 0px;}
+
+#another134{width: 350px; height: 130px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeec; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden; right: 0px;} 
+
+#another135{width: 320px; height: 160px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeed; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden; right: 0px;}
+
+#another136{width: 300px; height: 160px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeee; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden; bottom: 0px;}
+
+#another137{width: 300px; height: 120px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeef; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden; bottom: 0px;}
+
+#another138{width: 300px; height: 120px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeeg; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden; bottom: 0px;}
+
+#another139{width: 240px; height: 200px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeeh; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden; bottom: 0px;}
+
+#another140{width: 400px; height: 210px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeei; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden; bottom: 0px;}
+
+#another141{width: 320px; height: 130px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffee; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden; bottom: 0px;}
+
+#another142{width: 400px; height: 200px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeea; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden; bottom: 0px; right: 0px;}
+
+#another143{width: 400px; height: 200px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeeb; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden; bottom: 0px; right: 0px;}
+
+#another144{width: 340px; height: 200px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeec; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden; bottom: 0px; right: 0px;} 
+
+#another145{width: 320px; height: 230px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeed; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden; bottom: 0px; right: 0px;}
+
+#another146{width: 350px; height: 200px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeee; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden; bottom: 0px; right: 0px;}
+
+#another147{width: 300px; height: 120px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeef; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden; bottom: 0px; right: 0px;}
+
+#another148{width: 300px; height: 250px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeeg; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden; bottom: 0px;}
+
+#another149{width: 280px; height: 330px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeeh; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden; bottom: 0px;}
+
+#another150{width: 290px; height: 270px; margin: auto; z-index: 999; position: absolute; display: none;
+ font-weight: 700; text-align: left; padding: 10px; border-radius: 20px; 
+ border: 1px solid black; background-color: white; animation-name: coffeei; 
+ animation-duration: 1s; animation-timing-function: steps(20); overflow: hidden; bottom: 0px; right: 0px;}
+
+
+@keyframes blinks{
+  0% {opacity: 0.5;}
+  100% {opacity: 1;}
+}
+@keyframes coffee{
+  0% {width: 0px;}
+  100% {width: 320px;}
+}
+@keyframes coffeea{
+  0% {width: 0px;}
+  100% {width: 400px;}
+}
+@keyframes coffeeb{
+  0% {width: 0px;}
+  100% {width: 400px;}
+}
+@keyframes coffeec{
+  0% {width: 0px;}
+  100% {width: 240px;}
+}
+@keyframes coffeed{
+  0% {width: 0px;}
+  100% {width: 320px;}
+}
+@keyframes coffeee{
+  0% {width: 0px;}
+  100% {width: 300px;}
+}
+@keyframes coffeef{
+  0% {width: 0px;}
+  100% {width: 300px;}
+}
+@keyframes coffeeg{
+  0% {width: 0px;}
+  100% {width: 300px;}
+}
+@keyframes coffeeh{
+  0% {width: 0px;}
+  100% {width: 240px;}
+}
+@keyframes coffeei{
+  0% {width: 0px;}
+  100% {width: 290px;}
+}
+@keyframes coffeej{
+  0% {width: 0px;}
+  100% {width: 240px;}
+}
+@keyframes coffeek{
+  0% {width: 0px;}
+  100% {width: 300px;}
+}
+
+@keyframes plzdwn {
+      0%   {top: -70px;}
+      30%   {top: -10px;}
+      80%   {top: -10px;}
+      100%   {top: -70px;}
+    }
+
+@keyframes wnhct{
+  0% {top: -650px;}
+  100% {top: 0px;}
+}
+      
+    </style>

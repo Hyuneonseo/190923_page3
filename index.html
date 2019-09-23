@@ -1,0 +1,3745 @@
+<!DOCTYPE html>
+  <html>
+  <head>
+    <title></title>
+
+    <link rel="stylesheet" type="text/css" href="normalize.css">
+    <link rel="stylesheet" type="text/css" href="lay.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900" rel="stylesheet">
+    <style type="text/css">
+      a:link, a:active, a:visited {
+        color: black;
+        text-decoration: none;
+      }
+      a:hover{color: orangered;}
+    </style>
+  </head>
+  <body>
+
+
+<br><br><br><br>
+
+
+    <div class="filters" style="text-align: left; position: absolute; top: 50px; width: 100%; margin: auto; padding: 10px; z-index: 999; height: 120px; background-color: white;">
+
+  <div class="ui-group" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 30px; border-bottom: 1px solid black; overflow: hidden;">
+    <h3 style="font-size: 1.3em; line-height: 1.3em; font-weight: 700; position: absolute; left: 10px; border-right:1px solid black; width: 13%;height: 30px;">좋아하는 색을 고르세요.</h3>
+    <div class="button-group js-radio-button-group" data-filter-group="color" style=" position: absolute; right: 0px; top: 0px; float: right; width: 87%;">
+      <button class="button is-checked" data-filter="" style="width: 16.66%;">전체</button>
+      <button class="button" data-filter=".green" style="width: 16.66%;">초록</button>
+      <button class="button" data-filter=".red" style="width: 16.66%;">빨강</button>
+      <button class="button" data-filter=".skyb" style="width: 16.66%;">연파랑</button>
+      <button class="button" data-filter=".blue" style="width: 16.66%;">파랑</button>
+      <button class="button" data-filter=".yell" style="width: 16.66%;">노랑</button>
+    </div>
+  </div>
+
+  <br>
+
+  <div class="ui-group" style="position: absolute; top: 30px; left: 0px; width: 100%; height: 30px; border-bottom: 1px solid black;">
+    <h3 style="font-size: 1.3em; line-height: 1.3em; font-weight: 700; position: absolute; left: 10px; border-right:1px solid black; width:15%;height: 30px; ">떠오르는 이미지를 고르세요.</h3>
+    <div class="button-group js-radio-button-group" data-filter-group="size" style="position: absolute; right: 0px; top: 0px; width: 85%; border-bottom: 1px solid black; z-index: 999;">
+      <button class="button is-checked" data-filter="" style="width: 20%;">전체</button>
+      <button class="button" data-filter=".mount" style="text-decoration: line-through; width: 20%;">산</button>
+      <button class="button" data-filter=".road" style="width: 20%;">길</button>
+      <button class="button" data-filter=".sky" style="width: 20%;">하늘</button>
+      <button class="button" data-filter=".ocean" style="width: 20%;">바다</button>
+      
+    </div>
+  </div>
+
+  <br>
+
+  <div class="ui-group" style="position: absolute; top: 60px; left: 0px; width: 100%; height: 30px; border-bottom: 1px solid black; overflow: hidden;">
+    <h3 style="font-size: 1.3em; line-height: 1.3em; font-weight: 700; position: absolute; left: 10px; border-right:1px solid black; width: 14%;height: 30px;">좋아하는 계절을 고르세요.</h3>
+    <div class="button-group js-radio-button-group" data-filter-group="shape" style="position: absolute; width: 86%; right: 0px; float: right;">
+      <button class="button is-checked" data-filter="" style="width: 20%;">전체</button>
+      <button class="button" data-filter=".spr" style="width: 20%;">봄</button>
+      <button class="button" data-filter=".sum" style="width: 20%;">여름</button>
+      <button class="button" data-filter=".aut" style="width: 20%;">가을</button>
+      <button class="button" data-filter=".wint" style="width: 20%;">겨울</button>
+    
+    </div>
+  </div>
+
+  <br>
+
+  <div class="ui-group" style="position: absolute; top: 90px; left: 0px; width: 100%; height: 30px; border-bottom: 1px solid black;">
+    <h3 style="font-size: 1.3em; line-height: 1.3em; font-weight: 700; position: absolute; left: 10px; border-right:1px solid black; width: 15%;height: 30px;">가장 가까운 취미를 고르세요.</h3>
+    <div class="button-group js-radio-button-group" data-filter-group="dd" style="position: absolute; right: 0px; width: 85%; border-bottom: 1px solid black;">
+      <button class="button is-checked" data-filter="" style="width: 33.3%;overflow: hidden;">전체</button>
+      <button class="button" data-filter=".book" style="width: 33.3%;">독서</button>
+      <button class="button" data-filter=".trip" style="width: 33.3%;">여행</button> 
+    </div>
+  </div>
+
+</div>
+
+ <h3 style="text-align: center;">
+ 
+</h3> 
+<br>
+
+
+<div id="roim">
+  <img src="road.gif" style="position: absolute; width: 100%; z-index: -999;">
+</div>
+<div id="snr">
+  <img src="sunrise.gif" style="position: absolute; width: 100%; z-index: -999;">
+</div>
+<div id="snr3">
+  <img src="sunrise3.gif" style="position: absolute; width: 100%; z-index: -999;">
+</div>
+
+
+
+<div class="grid" style="margin: auto; margin-top: 130px;">
+ 
+  <div class="all green mount spr book" onclick="mytoFunction()" onmouseover="showsnr3()" onmouseout="noshowsnr3()">
+    알찬바로
+    <div id="another1">
+      <span style="font-size: 2em;">
+        *알차게 바로 살라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all green mount spr trip" onclick="mytoFunction2()" onmouseover="showroim()" onmouseout="noshowroim()">
+    고든길
+    <div id="another2">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *곧은길로만 가라고 ‘곧은길’을 소리나는 대로 옮긴 이름.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all green mount sum book" onclick="mytoFunction3()">
+    고운별
+    <div id="another3">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *곱게 그리고 별처럼 빛나는 삶을 살라는 뜻으로 지은 이름.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all green mount sum trip" onclick="mytoFunction4()">
+    고운비
+    <div id="another4">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *곱게 내리는 비.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all green mount aut book" onclick="mytoFunction5()" onmouseover="showroim()" onmouseout="noshowroim()">
+    너른길
+    <div id="another5">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *넓고 바른 길을 따라 사는 사람이 되라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all green mount aut trip" onclick="mytoFunction6()">
+    밝은빛
+    <div id="another6">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *온 누리를 밝게 비추는 빛이 되라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all green mount wint book trip" onclick="mytoFunction7()" onmouseover="showroim()" onmouseout="noshowroim()">
+    알찬길
+    <div id="another7">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *알차고 실속 있는 인생길을 가라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all green road spr book" onclick="mytoFunction8()">
+    어진꽃
+    <div id="another8">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *마음이 어질고 꽃과 같이 곱다는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all green road spr trip" onclick="mytoFunction9()">
+    온찬
+    <div id="another9">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *온갖 것이 모두 찬, 즉 사람으로서 갖추어야 할 여러 가지 것들이 모둔 찬 사람이라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all green road sum book" onclick="mytoFunction10()">
+    온큰
+    <div id="another10">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *모자람 없이 온전하고 큰 인물이 되라는 뜻에서 ‘온전하고 큰’을 줄여 지은 이름.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all green road sum trip" onclick="mytoFunction11()">
+    새듬
+    <div id="another11">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *우리 가족의 한 사람으로 새로 든 사람이라는 뜻. ‘듬’은 ‘들다’의 명사형.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all green road aut book" onclick="mytoFunction12()">
+    새거울
+    <div id="another12">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *새 거울에 자신의 모습을 비추듯 늘 스스로를 성찰하며 살라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all green road aut trip" onclick="mytoFunction13()">
+    아라치
+    <div id="another13">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *아름다운 사람이라는 뜻에서 아름답다의 옛말을 빌려 지은 이름.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all green road wint book trip" onclick="mytoFunction14()">
+    온솔
+    <div id="another14">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *'온전한 소나무'라는 뜻으로 곧고 청청한 소나무의 속성을 닮으라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all green sky spr book" onclick="mytoFunction15()">
+    드레
+    <div id="another15">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *'사람의 됨됨이로서의 점잖음과 무게'라는 뜻으로 자신의 가치를 키우는 사람이 되라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all green sky spr trip" onclick="mytoFunction16()">
+    또드락
+    <div id="another16">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *'판소리 장단에서 채로 북통을 두드리는 것'을 뜻하는 말을 그대로 삼은 이름으로 흥겹게 삶을 살라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all green sky sum book" onclick="mytoFunction17()">
+    새오리
+    <div id="another17">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *'이 사람에게 모든 일이 새롭게 다가오리'를 줄여 지은 이름.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all green sky sum trip" onclick="mytoFunction18()">
+    새스레
+    <div id="another18">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *새롭고 사랑스레(사랑스럽게) 자라날 사람이라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all green sky aut book" onclick="mytoFunction19()">
+    타랑
+    <div id="another19">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *때로는 무디고 둔하게 살라는 뜻에서 둔하게 울릴 때 나는 소리를 그대로 삼은 이름.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all green sky aut trip" onclick="mytoFunction20()">
+    한이삭
+    <div id="another20">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *튼튼하고 씩씩하게 자라 큰 이삭으로 팰 사람이라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all green sky wint book trip" onclick="mytoFunction21()">
+    한미루 
+    <div id="another21">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *큰 용(미루)처럼 웅비하는 기상을 지닌 사람이 되라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all green ocean spr book" onclick="mytoFunction22()">
+    두리진
+    <div id="another22">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *둥근 것이란 뜻의 '두리'와 '어떤 상태가 생기거나 이루어지다'라는 뜻의 '지다'의 활용형인 '진'이 합쳐진 말로 둥글둥글하게 모두와 화합하며 산다는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all green ocean spr trip" onclick="mytoFunction23()">
+    늘바른
+    <div id="another23">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *항상 바르게 살라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all green ocean sum book" onclick="mytoFunction24()">
+    다가득한
+    <div id="another24">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *모든 좋은 것들이 가득하라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all green ocean sum trip" onclick="mytoFunction25()">
+    다곰
+    <div id="another25">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *모두를 뜻하는 옛말의 '다곰다곰'에서 따온 말.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all green ocean aut book" onclick="mytoFunction26()">
+    가득차오름
+    <div id="another26">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *'넘치도록 가득 차 오른다'는 말로, 언제나 만족한 삶을 살라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all green ocean aut trip" onclick="mytoFunction27()">
+    늘나라
+    <div id="another27">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *언제나(늘) 큰 꿈을 가지고 날아가라(나라=날+아)는 뜻. 또는 언제나 나라를 생각하며 살아가라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all green ocean wint book" onclick="mytoFunction28()">
+    다열림
+    <div id="another28">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *이 아이가 두드리는 세상의 모든 문들이 이 아이를 향해 열리라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all green ocean wint book" onclick="mytoFunction29()">
+    다채운
+    <div id="another29">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *모든 것이 부족함 없이 채워져 있다는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all green ocean wint trip" onclick="mytoFunction30()">
+    바로설
+    <div id="another30">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *세상에 바로 설 큰 인물이 되라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all red mount spr book" onclick="mytoFunction31()">
+    새난
+    <div id="another31">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *늘 새로 태어난 듯이 새로운 마음으로 살라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all red mount spr trip" onclick="mytoFunction32()">
+    모루미
+    <div id="another32">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *모르긴 몰라도 훌륭하게 자랄 아이라는 뜻으로 '모르지마는, 그럴지언정'이라는 뜻의 평북 방언을 그대로 삼은 이름.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all red mount sum book" onclick="mytoFunction33()">
+    보담
+    <div id="another33">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *더 나은 삶을 살라는 뜻에서 '보다'의 방언을 그대로 삼은 이름.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all red mount sum trip" onclick="mytoFunction34()">
+    노피별
+    <div id="another34">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *높이 뜬 별처럼 빛나는 사람이 되라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all red mount aut book" onclick="mytoFunction35()">
+    늘글
+    <div id="another35">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *언제나 글을 가까이하며 슬기롭고 겨손한 사람이 되라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all red mount aut trip" onclick="mytoFunction36()"> 
+    다힘
+    <div id="another36">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *'모든 기운이 하나로 뭉쳐진 힘'을 뜻하는 것으로, 씩씩하고 슬기로운 사람으로 이루지 못할 것이 없음을 뜻하는 이름.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all red mount wint book trip" onclick="mytoFunction37()">
+    돋해
+    <div id="another37">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *돋는 해처럼 희망차고 밝으라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all red road spr book" onclick="mytoFunction38()">
+    두루해
+    <div id="another38">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *두루두루 빛나는 해와 같은 인물이 되라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all red road spr trip" onclick="mytoFunction39()">
+    바센나
+    <div id="another39">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *'바람처럼 센 힘을 지니고 태어나'를 줄여 다듬은 이름.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all red road sum book" onclick="mytoFunction40()">
+    돌찬
+    <div id="another40">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *돌처럼 야무지고 옹골찬 아이라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all red road sum trip" onclick="mytoFunction41()">
+    별아련
+    <div id="another41">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *분명하지 않고 어렴풋한 별빛이라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all red road aut book" onclick="mytoFunction42()">
+    빛참
+    <div id="another42">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *빛으로 가득 찬 삶을 살라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all red road aut trip" onclick="mytoFunction43()">
+    샘큰
+    <div id="another43">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *큰 샘처럼 여유로움이 넘치는 사람이 되라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all red road wint book trip" onmouseover="showsnr()" onmouseout="noshowsnr()" onclick="mytoFunction44()">
+    해고운
+    <div id="another44">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *아주 고운 사람이라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all red sky spr book" onmouseover="showsnr()" onmouseout="noshowsnr()" onclick="mytoFunction45()">
+    해긴
+    <div id="another45">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *오래오래 행복하게 살라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all red sky spr trip" onmouseover="showsnr()" onmouseout="noshowsnr()" onclick="mytoFunction46()">
+    해조아해
+    <div id="another46">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *'해를 좋아해'를 줄여 소리 나는 대로 옮긴 이름.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all red sky sum book" onmouseover="showsnr()" onmouseout="noshowsnr()" onclick="mytoFunction47()">
+    해찬
+    <div id="another47">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *'햇살이 가득 찬'을 줄여 지은 이름.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all red sky sum trip" onclick="mytoFunction48()">
+    꽃하나
+    <div id="another48">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *한 떨기의 꽃처럼 귀하고 예쁜사람 이라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all red sky aut book" onclick="mytoFunction49()">
+    나하나
+    <div id="another49">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *나는 유일한 존재라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all red sky aut book" onclick="mytoFunction50()">
+    나절로
+    <div id="another50">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *마음속에서 저절로 우러나오는 삶을 산다는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all red sky wint book trip" onclick="mytoFunction51()">
+    바위늘
+    <div id="another51">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *언제나 바위처럼 마음을 굳게 다지며 살라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all red ocean spr book" onclick="mytoFunction52()">
+    벌늘
+    <div id="another52">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *언제나 벌판처럼 넓은 마음을 지니라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all red ocean spr trip" onclick="mytoFunction53()">
+    봄다
+    <div id="another53">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *봄기운을 다 모은 듯이 화사하고 포근한 성품의 아이가 되라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all red ocean sum book" onmouseover="showsnr()" onmouseout="noshowsnr()" onclick="mytoFunction54()">
+    빛늘
+    <div id="another54">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *언제나 빛이 나는 사람이 되라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all red ocean sum trip" onclick="mytoFunction55()">
+    하양다
+    <div id="another55">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *깨끗함을 모두 다 모아놓은 듯이 마음이 순결한 사람이 되라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all red ocean aut book" onclick="mytoFunction56()">
+    샘늘
+    <div id="another56">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *언제나 샘처럼 맑고 깨끗하라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all red ocean aut trip" onmouseover="showsnr()" onmouseout="noshowsnr()" onclick="mytoFunction57()">
+    해늘
+    <div id="another57">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *늘 해처럼 밝게 살라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all red ocean wint book" onclick="mytoFunction58()">
+    글든
+    <div id="another58">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *학문이 그득 글어찼다는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all red ocean wint trip" onclick="mytoFunction59()">
+    글모아
+    <div id="another59">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *앞으로 글을 잘 쓰라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all red ocean wint trip" onclick="mytoFunction60()">
+    글오름
+    <div id="another60">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *글을 잘 써 정상에 오르라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all skyb mount spr book" onclick="mytoFunction61()">
+    소리나
+    <div id="another61">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *아름다운 소리의 날개를 달고 날아보라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all skyb mount spr trip" onclick="mytoFunction62()">
+    으뜸나리
+    <div id="another62">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *'으뜸가는 인물로 자라나리'를 줄여 지은 이름.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all skyb mount sum book" onclick="mytoFunction63()">
+    이름나
+    <div id="another63">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *큰 인물이 되어 이름이 널리 알려지라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all skyb mount sum tirp" onclick="mytoFunction64()">
+    이슬나
+    <div id="another64">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *이슬처럼 맑고 예쁘게 자라나라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all skyb mount aut book" onclick="mytoFunction65()">
+    잔디나
+    <div id="another65">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *'잔디처럼 푸르게 자라나'를 줄여 지은 이름.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all skyb mount aut trip" onmouseover="showsnr()" onmouseout="noshowsnr()" onclick="mytoFunction66()">
+    해길
+    <div id="another66">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *해가 비추는 길을 가듯 평탄하게 살라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all skyb mount wint book trip" onmouseover="showsnr()" onmouseout="noshowsnr()" onclick="mytoFunction67()">
+    해든
+    <div id="another67">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *'해가 든'을 줄인 말로 해가 드는 양지처럼 포근하고 따뜻한 삶을 살라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all skyb road spr book" onmouseover="showsnr()" onmouseout="noshowsnr()" onclick="mytoFunction68()"> 
+    해안음
+    <div id="another68">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *품안에 해를 안은 듯이 환하고 따뜻한 사람이 되라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all skyb road spr trip" onclick="mytoFunction69()">
+    힘나라
+    <div id="another69">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *기운 세고 건강하게 자라나라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all skyb road sum book" onclick="mytoFunction70()">
+    구름재
+    <div id="another70">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *구름이 쉬어 넘는 고개라는 뜻으로 운치있게 지은 이름.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all skyb road sum tirp" onclick="mytoFunction71()"> 
+    구슬샘
+    <div id="another71">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *구슬처럼 맑은 물이 솟아나는 샘이라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all skyb road aut book" onclick="mytoFunction72()">
+    별글
+    <div id="another72">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *별처럼 아름답고 빛이 나는 글을 쓰는 사람이 되라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all skyb road aut trip" onclick="mytoFunction73()">
+    보라샘
+    <div id="another73">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *'보랏빛의 샘물'을 줄여 지은 이름.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all skyb road wint book trip" onclick="mytoFunction74()">
+    보름나라
+    <div id="another74">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *보름달처럼 온 세상에 환히 빛나라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all skyb sky spr book" onclick="mytoFunction75()">
+    봄눈
+    <div id="another75">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *봅에 내릴는 눈이라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all skyb sky spr trip" onclick="mytoFunction76()">
+    하얀꽃하나
+    <div id="another76">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *'하얀 꽃 한송이'라는 뜻으로, 깨끗하면서도 순수함을 나타내는 이름.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all skyb sky sum book" style="border: 1px solid black;" onclick="mytoFunction77()">
+    큰꽃늘
+    <div id="another77">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *늘 커다란 꽃으로 피어나라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all skyb sky sum trip" onclick="mytoFunction78()">
+    고운해오름
+    <div id="another78">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *아이를 낳아서 기쁜 마음을 어둠을 거둬가는 해오름에 빗대어 지은 이름.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all skyb sky aut book" onclick="mytoFunction79()">
+    큰봄나
+    <div id="another79">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *크게 될 인물을 봄에 낳았다는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all skyb sky aut trip" onclick="mytoFunction80()">
+    고운솔나라
+    <div id="another80">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *고운 소나무처럼 푸르게 자라나라고 지은 이름.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all skyb sky wint book trip" onclick="mytoFunction81()">
+    든해솔
+    <div id="another81">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *늘 보아서 정이 가득 든 해와 소나무처럼 언제나 밝고 꿋꿋한 사람이 되라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all skyb ocean spr book" onclick="mytoFunction82()">
+    큰눈들
+    <div id="another82">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *많은 눈이 쌓인 들판이라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all skyb ocean spr trip" onclick="mytoFunction83()">
+    큰봄내
+    <div id="another83">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *이제 막 풀리기 시작한 봄 철의 큰 냇물처럼 모든 일이 순조롭고 희망차게 풀리라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all skyb ocean sum book" onclick="mytoFunction84()">
+    새칸
+    <div id="another84">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *'칸'은 '우두머리'를 가리키는 말로, 새로운 지도자가 될 사람이라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all skyb ocean sum trip" onclick="mytoFunction85()">
+    새힘찬
+    <div id="another85">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *새롭고 힘찬 모습으로 살라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all skyb ocean aut book" onclick="mytoFunction86()">
+    새들꽃
+    <div id="another86">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *새로운 들판에 피어난 꽃이라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all skyb ocean aut trip" onclick="mytoFunction87()">
+    새미라
+    <div id="another87">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *'새롭고 미덥게 자라라'에서 특정 음절을 따서 옯긴 이름.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all skyb ocean wint book" onclick="mytoFunction88()">
+    두빛나보라
+    <div id="another88">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *'두고두고 빛나 보라'를 줄여 지은 이름.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all skyb ocean wint book" onclick="mytoFunction89()">
+    두바다누리
+    <div id="another89">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *바다와 누리처럼 통이 크고 넓은 아이를 두다.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all skyb ocean wint trip" onclick="mytoFunction90()">
+    두빛들
+    <div id="another90">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *'들판에 두루두루 가득한 빛'을 줄여 지은 이름.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all blue mount spr book" onclick="mytoFunction91()">
+    두메아침
+    <div id="another91">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *'깊은 산중의 아침'을 뜻하는 이름으로 산골 같은 순수함과 아침이 상징하는 희망을 지닌 사람이 되라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all blue mount spr trip" onclick="mytoFunction92()">
+    두빛나래
+    <div id="another92">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *'두개의 빛나는 날개'를 줄여 지은 이름.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all blue mount sum book" onclick="mytoFunction93()">
+    한소라
+    <div id="another93">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *'한 그루 푸른 솔아'를 줄여 지은 이름.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all blue mount sum trip" onclick="mytoFunction94()">
+    가득찬길
+    <div id="another94">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *인생행로(길)에 사랑이 가득차라는 뜻으로 지은 이름.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all blue mount aut book" onclick="mytoFunction95()">
+    다하얀별
+    <div id="another95">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *어느 한 모퉁이 빠짐없이 모두 하얀 별이라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all blue mount aut trip" onclick="mytoFunction96()">
+    바로찬글
+    <div id="another96">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *'바르고 옹골찬 글을 쓰는 사람이 되라'는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all blue mount wint book trip" onclick="mytoFunction97()">
+    새로찬나라
+    <div id="another97">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *새롭고 옹골찬 사람으로 자라라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all blue road spr book" onclick="mytoFunction98()">
+    다늘차
+    <div id="another98">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *모든 면에서 언제나(늘) 차 있는 사람이 되라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all blue road spr trip" onclick="mytoFunction99()"> 
+    늘봄터
+    <div id="another99">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *'언제나 봄기운이 느껴지는 따뜻한 곳(터)'이라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all blue road sum book" onclick="mytoFunction100()">
+    별찬하련
+    <div id="another100">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *별빛이 가득 찬 듯 빛나는 훌륭한 일을 많이 하라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all blue road sum trip" onclick="mytoFunction101()">
+    별찬길
+    <div id="another101">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *별빛이 가득 찬 길이라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all blue road aut book" onclick="mytoFunction102()">
+    보람빛글
+    <div id="another102">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *세살을 밝히는 글을 써서 보람을 드러내는 사람이 되라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all blue road aut trip" onclick="mytoFunction103()">
+    해여울
+    <div id="another103">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *햇빛이 내리쬐는 여울처럼 반짝반짝 빛나는 삶을 살라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all blue road wint book trip" onclick="mytoFunction104()">
+    해찬들
+    <div id="another104">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *햇빛 가득 찬 들이라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all blue sky spr book" onclick="mytoFunction105()">
+    해찬별
+    <div id="another105">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *해처럼 빛으로 가득 찬 별이라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all blue sky spr trip" onclick="mytoFunction106()">
+    해찬솔
+    <div id="another106">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *햇빛으로 가득 찬 푸른 소나무라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all blue sky sum book" onclick="mytoFunction107()">
+    하늘더푸른
+    <div id="another107">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *'하늘보다 더 푸른'을 줄여 지은 이름.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all blue sky sum trip" onclick="mytoFunction108()">
+    글가득샘
+    <div id="another108">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *글로 가득찬 샘이라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all blue sky aut book" onclick="mytoFunction109()">
+    글늘빛
+    <div id="another109">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *언제나(늘) 글로 빛나는 사라이 되라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all blue sky aut trip" onclick="mytoFunction110()">
+    보람뿌리
+    <div id="another110">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *근본이 착하고 튼실해서 앞으로 큰 보람을 느끼며 살아갈 아이라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all blue sky wint book trip" onclick="mytoFunction111()">
+    슬기다해
+    <div id="another111">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *'슬기를 다 발휘해'에서 따서 지은 이름.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all blue ocean spr book" onclick="mytoFunction112()">
+    해늘봄
+    <div id="another112">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *언제나 햇빛이 가득한 봄이라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all blue ocean spr trip" onclick="mytoFunction113()">
+    해든알찬
+    <div id="another113">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *해가 들어 더욱 알찬 열매를 맺으라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all blue ocean sum book" onclick="mytoFunction114()">
+    솔찬하련
+    <div id="another114">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *소나무 같은 기상으로 옹골찬 일을 많이 하라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all blue ocean sum trip" onclick="mytoFunction115()">
+    너나울
+    <div id="another115">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *'나,너,우리'를 줄여 지은 이름으로 모든 사람과 함께 어울려 살라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all blue ocean aut book" onmouseover="showroim()" onmouseout="noshowroim()" onclick="mytoFunction116()">
+    새나비
+    <div id="another116">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *'새로운 나비'를 줄여 지은 이름.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all blue ocean aut trip" onmouseover="showroim()" onmouseout="noshowroim()" onclick="mytoFunction117()"> 
+    솔휘
+    <div id="another117">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *'솔 향기 처럼 휘날리다'를 줄여 지은 이름으로, 기분을 상쾌하게 만들어 주는 솔향기 같은 사람이 되라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all blue ocean wint book" onclick="mytoFunction118()">
+    해나가람
+    <div id="another118">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *해가 나서 빛을 받은 강처럼 반짝이는 삶의 기쁨을 안고 살라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all blue ocean wint book" onclick="mytoFunction119()">
+    함초롬
+    <div id="another119">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *'담뿍 젖거나 서리어 있는 모양이 차분하다'는 뜻의 함초롬하다를 줄여 지은 이름.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all blue ocean wint trip" onclick="mytoFunction120()">
+    해든나라
+    <div id="another120">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *'해가 들어 찬란한 나라'를 줄여지은 이름.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all yell mount spr book" onclick="mytoFunction121()">
+    해든마루
+    <div id="another121">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *'해가 든 산마루'를 줄여 지은 이름.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all yell mount spr trip" onclick="mytoFunction122()">
+    해든별
+    <div id="another122">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *햇빛이 비쳐 빛을 잃은 별처럼 두드러지게 드러나지 않아도 겸허하게 자신의 자리를 지키는 사람이 되라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all yell mount sum book" onclick="mytoFunction123()">
+    해란
+    <div id="another123">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *'해처럼 찬란한'에서 따서 지은 이름.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all yell mount sum trip" onclick="mytoFunction124()">
+    풀빛다
+    <div id="another124">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *풀빛을 다 모은 듯이 푸르고 싱싱하게 살라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all yell mount aut book" onclick="mytoFunction125()">
+    가을해오름
+    <div id="another125">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *가을에 해가 솟아올랐다는 뜻으로, 가을에 태어난 사람을 비유하여 지은 이름.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all yell mount aut trip" onclick="mytoFunction126()">
+    기리
+    <div id="another126">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *여러 사람이 입을 모아 칭찬할 만한 사람이 되라는 뜻이서 '기리다(칭찬하다)'에서 따온 이름.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all yell mount wint book trip" onclick="mytoFunction127()">
+    나루해오름
+    <div id="another127">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *강나루에 해가 떠오른다는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all yell road spr book" onclick="mytoFunction128()">
+    금독수리온세상을놀라게하다
+    <div id="another128">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *이 사람이 태어나니 온 세상의 사람과 강, 산, 바다, 땅, 동식물 할 것 없이 모두가 놀랐다는 뜻으로 길게 지은 이름.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all yell road spr trip" onclick="mytoFunction129()">
+    길튼
+    <div id="another129">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *어떤 분야의 선구자로서 길을 개척하는 사람이 되라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all yell road sum book" onclick="mytoFunction130()">
+    휘걸
+    <div id="another130">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *'세게,빨리'의 뜻인 '휘'와 '기대나 희망을 갖다'라는 뜻의 '걸다'에서 '걸'을 따다 합한 이름으로 세찬 바람으로 기대를 걸었다는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all yell road sum trip" onclick="mytoFunction131()">
+    해솔찬
+    <div id="another131">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *소나무(솔) 한가운데(가온대:옛말) 걸린 해'를 줄여 다듬은 이름.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all yell road aut book" onclick="mytoFunction132()">
+    해재찬
+    <div id="another132">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *'햇빛이 재(언덕)에 가득 찬'을 줄여 지은 이름.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all yell road aut trip" onclick="mytoFunction133()" style="width: 60px;">
+    하늘바위라
+    <div id="another133">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *하늘에서 내린 바위처럼 듬직한 사람이라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all yell road wint book trip" onclick="mytoFunction134()">
+    감미루
+    <div id="another134">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *큰 용(감=큼, 미루=용)을 뜻하는 이름.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all yell sky spr book" onclick="mytoFunction135()">
+    글새빛
+    <div id="another135">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *글을 잘 써서 새로운 빛을 던지는 사람이 되라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all yell sky spr trip" onclick="mytoFunction136()">
+    글슬기샘
+    <div id="another136">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *글을 통해 늘 슬기로운을 얻는 삶을 살라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all yell sky sum book" onclick="mytoFunction137()">
+    해솔나라
+    <div id="another137">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *해처럼 밝게 소나무처럼 곧게 자라라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all yell sky sum trip" onclick="mytoFunction138()">
+    글로빛나
+    <div id="another138">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *글로 이름이 빛나는 사람이 되라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all yell sky aut book" onclick="mytoFunction139()">
+    해가맑은
+    <div id="another139">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *'해가 떠서 맑은'을 줄여 지은 이름.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all yell sky aut trip" onclick="mytoFunction140()">
+    해기쁨
+    <div id="another140">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *'많이'의 예맛 '해'와 '기쁘다;의 명사형 '기쁨'을 합한 이름으로 이 사람을 낳아 아주 큰 기쁨을 얻었다는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all yell sky wint book trip" onclick="mytoFunction141()">
+    글로나라
+    <div id="another141">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *글로 세상에 이름나라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all yell ocean spr book" onclick="mytoFunction142()">
+    보미든
+    <div id="another142">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *이 사람을 얻은 기쁨으로 온 마음에 봄이 가득 든 듯하다는 뜻에서 '봄이든'을 소리 나는 대로 옮겨 지은 이름.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all yell ocean spr trip" onclick="mytoFunction143()">
+    글온
+    <div id="another143">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *'글'에 머드, 전부의 뜻을 지닌 '온'을 붙인 이름으로서 학문을 익혀 사회의 발전에 이바지 하는 사람이 되라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all yell ocean sum book" onclick="mytoFunction144()">
+    글가람
+    <div id="another144">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *'글'과 강의 옛말인 '가람'을 합한 이름으로서 강과 같이 깊고 넓은 지식(글)을 쌓으라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all yell ocean sum trip" onclick="mytoFunction145()">
+    뜰에봄
+    <div id="another145">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *뜰에 찾아온 봄이라는 뜻으로 이 사람이 태어나 온 나라에 마치 새 봄이 온 듯 새롭고 기쁘다는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all yell ocean aut book" onclick="mytoFunction146()">
+    보리나
+    <div id="another146">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *추위를 견디며 자라는 보리처럼 고난을 이겨내며 자라라는 뜻에서 '보리처럼 자라나'를 줄여 지은 이름.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all yell ocean aut trip" onclick="mytoFunction147()">
+    두바다찬빛
+    <div id="another147">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *'두 바다에 가득 찬 빛'을 줄여 지은 이름.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all yell ocean wint book" onclick="mytoFunction148()">
+    가까스로어든노미
+    <div id="another148">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *'가까스로 얻은 놈 + 이'를 소리 나는 대로 적은 말로, 곧 아주 어렵게 얻은 자식이라는 뜻에서 지은 이름.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all yell ocean wint trip" onclick="mytoFunction149()">
+    별찬해솔
+    <div id="another149">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *별이 가득 찬 하늘과 희망을 상징하는 해, 그리고 꿋꿋한 소나무처럼 언제나 참신함과 희망과 기상을 잃지 않는 사람이 되라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="all yell ocean wint trip" onclick="mytoFunction150()">
+    뜰에새봄결
+    <div id="another150">
+      <span style="font-size: 2em; line-height: 1.2em;">
+        *뜰에 새봄의 물결이 찾아든 것처럼 남들에게 새봄의 싱그럽고 따뜻한 기운과 희망을 주는 사람이 되라는 뜻.<br>
+      </span>
+      <a href="sinbunjueng.html">
+        <span style="background-color: black; color: white;"> 
+        이름으로 저장하기
+      </span>
+      </a>
+    </div>
+  </div>
+  
+
+  
+</div>
+
+<div class="mbar">
+  
+    <img src="tenor1.gif" style="position: absolute; top: 0px; left: 0px; width: 100%; position: absolute; top: -350px; z-index: -999;">
+    < 본격 작명하기 >
+      
+   
+ 
+</div>
+
+  
+  
+</div>
+
+<div class="menu" style="width: 100%; margin: 0px; overflow: hidden; height: 115px; position: absolute; top: 0px;">
+      <div id="nhct">
+        <br>
+        <br>
+        <br>
+        노하우 및 조어방식 소개 랑
+        <br>
+        접두사 종류
+        <br>(1) 형용사 : 16개
+        <br>(2) 관형사 : 10개
+        <br>(3) 수사 : 14개
+        <br>(4) 부사 : 25개
+        <br>(5) 명사 : 85개
+        <br>
+        <br>어근의 종류
+        <br>(1) 부사 : 1개
+        <br>(2) 명사 : 59개
+        <br>(3) 형용사 : 29개
+        <br>(4) 동사 : 33개
+        <br>(5) 부사 : 16개
+        <br>(6) 수사 : 2개
+        <br>(7) 조사 : 10개
+        <br>
+        <br>접미사의 종류
+        <br>(1) 수사 : 1개
+        <br>(2) 부사 : 3개
+        <br>(3) 동사 : 13개
+        <br>(4) 명사 : 42개
+        <br>(5) 형용사 : 12개
+        <br>(6) 조사 : 1개
+        <br>(7) 감탄사 : 1개
+        <br>(8) 서술격조사 : 1개
+        <br>(9) 관형사 : 1개
+        <br>
+        <br>긴 합성어 종류
+        <br>(1) 명사 : 3개
+        <br>(2) 조사 : 1개
+        <br>조어가 안되는 몇 경우 안내
+      </div>
+      
+    </div>
+<div class="nohow" onclick="shownhct()">
+  ?
+</div>
+<div class="ftr" style="width: 100%; height: 80px; background-color: white; border-top: 1px solid black; position: fixed; bottom: 0px; left: 0px; text-align: center; font-weight: 700; font-size: 3.1em;">
+
+  <div class="bfbt" style="position: absolute; z-index: 999;"><a href="newpreface.html">◀︎ 서문</a></div>
+
+  <div class="nwbt" style="position: relative; right: -10px;"><a href="loading.html">HOME</a></div>
+  
+
+  <div class="nxbt"><a href="sinbunjueng.html">신분증 발급받기 ▶︎</a></div></div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="isotope.pkgd.min.js"></script>
+    </script>
+    <script type="text/javascript">
+      // external js: isotope.pkgd.js
+
+      // init Isotope
+      var $grid = $('.grid').isotope({
+        itemSelector: '.all'
+      });
+
+      // store filter for each group
+      var filters = {};
+
+      $('.filters').on( 'click', '.button', function( event ) {
+        var $button = $( event.currentTarget );
+        // get group key
+        var $buttonGroup = $button.parents('.button-group');
+        var filterGroup = $buttonGroup.attr('data-filter-group');
+        // set filter for group
+        filters[ filterGroup ] = $button.attr('data-filter');
+        // combine filters
+        var filterValue = concatValues( filters );
+        // set filter for Isotope
+        $grid.isotope({ filter: filterValue });
+      });
+
+      // change is-checked class on buttons
+      $('.button-group').each( function( i, buttonGroup ) {
+        var $buttonGroup = $( buttonGroup );
+        $buttonGroup.on( 'click', 'button', function( event ) {
+          $buttonGroup.find('.is-checked').removeClass('is-checked');
+          var $button = $( event.currentTarget );
+          $button.addClass('is-checked');
+        });
+      });
+        
+      // flatten object by concatting values
+      function concatValues( obj ) {
+        var value = '';
+        for ( var prop in obj ) {
+          value += obj[ prop ];
+        }
+        return value;
+      }
+
+      (function(){
+          var d = false;
+          var target,dx,dy;
+          var t = document.getElementsByClassName("drag");
+          for(var i=0; i<t.length; i++){
+            t[i].style.display = "block";
+            t[i].style.position = "absolute";
+            t[i].style.cursor = "pointer";
+            t[i].ondragstart = function(e){e.preventDefault();};
+            t[i].onmousedown = function(e){ d = true; dx = e.offsetX; dy = e.offsetY; target = e.target;}
+            t[i].onmouseup = function(){ d = false;}
+            window.onmousemove = function(e){ 
+              if(d){ target.style.left = (e.clientX - dx) + "px";
+                target.style.top = (e.clientY - dy) + "px";}
+            }
+          }
+        })();
+
+    </script>
+
+    <script type="text/javascript">
+      function mytoFunction(){
+         var x = document.getElementById("another1");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction2(){
+         var x = document.getElementById("another2");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction3(){
+         var x = document.getElementById("another3");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction4(){
+         var x = document.getElementById("another4");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction5(){
+         var x = document.getElementById("another5");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction6(){
+         var x = document.getElementById("another6");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction7(){
+         var x = document.getElementById("another7");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction8(){
+         var x = document.getElementById("another8");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction9(){
+         var x = document.getElementById("another9");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction10(){
+         var x = document.getElementById("another10");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction11(){
+         var x = document.getElementById("another11");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction12(){
+         var x = document.getElementById("another12");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction13(){
+         var x = document.getElementById("another13");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction14(){
+         var x = document.getElementById("another14");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction15(){
+         var x = document.getElementById("another15");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction16(){
+         var x = document.getElementById("another16");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction17(){
+         var x = document.getElementById("another17");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction18(){
+         var x = document.getElementById("another18");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction19(){
+         var x = document.getElementById("another19");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction20(){
+         var x = document.getElementById("another20");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction21(){
+         var x = document.getElementById("another21");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction22(){
+         var x = document.getElementById("another22");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction23(){
+         var x = document.getElementById("another23");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction24(){
+         var x = document.getElementById("another24");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction25(){
+         var x = document.getElementById("another25");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction26(){
+         var x = document.getElementById("another26");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction27(){
+         var x = document.getElementById("another27");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction28(){
+         var x = document.getElementById("another28");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction29(){
+         var x = document.getElementById("another29");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction30(){
+         var x = document.getElementById("another30");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction31(){
+         var x = document.getElementById("another31");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction32(){
+         var x = document.getElementById("another32");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction33(){
+         var x = document.getElementById("another33");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction34(){
+         var x = document.getElementById("another34");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction35(){
+         var x = document.getElementById("another35");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction36(){
+         var x = document.getElementById("another36");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction37(){
+         var x = document.getElementById("another37");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction38(){
+         var x = document.getElementById("another38");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction39(){
+         var x = document.getElementById("another39");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction40(){
+         var x = document.getElementById("another40");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction41(){
+         var x = document.getElementById("another41");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction42(){
+         var x = document.getElementById("another42");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction43(){
+         var x = document.getElementById("another43");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction44(){
+         var x = document.getElementById("another44");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction45(){
+         var x = document.getElementById("another45");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction46(){
+         var x = document.getElementById("another46");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction47(){
+         var x = document.getElementById("another47");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction48(){
+         var x = document.getElementById("another48");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction49(){
+         var x = document.getElementById("another49");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction50(){
+         var x = document.getElementById("another50");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction51(){
+         var x = document.getElementById("another51");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction52(){
+         var x = document.getElementById("another52");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction53(){
+         var x = document.getElementById("another53");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction54(){
+         var x = document.getElementById("another54");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction55(){
+         var x = document.getElementById("another55");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction56(){
+         var x = document.getElementById("another56");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction57(){
+         var x = document.getElementById("another57");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction58(){
+         var x = document.getElementById("another58");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction59(){
+         var x = document.getElementById("another59");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction60(){
+         var x = document.getElementById("another60");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction61(){
+         var x = document.getElementById("another61");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction62(){
+         var x = document.getElementById("another62");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction63(){
+         var x = document.getElementById("another63");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction64(){
+         var x = document.getElementById("another64");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction65(){
+         var x = document.getElementById("another65");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction66(){
+         var x = document.getElementById("another66");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction67(){
+         var x = document.getElementById("another67");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction68(){
+         var x = document.getElementById("another68");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction69(){
+         var x = document.getElementById("another69");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction70(){
+         var x = document.getElementById("another70");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction71(){
+         var x = document.getElementById("another71");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction72(){
+         var x = document.getElementById("another72");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction73(){
+         var x = document.getElementById("another73");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction74(){
+         var x = document.getElementById("another74");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction75(){
+         var x = document.getElementById("another75");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction76(){
+         var x = document.getElementById("another76");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction77(){
+         var x = document.getElementById("another77");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction78(){
+         var x = document.getElementById("another78");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction79(){
+         var x = document.getElementById("another79");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction80(){
+         var x = document.getElementById("another80");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction81(){
+         var x = document.getElementById("another81");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction82(){
+         var x = document.getElementById("another82");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction83(){
+         var x = document.getElementById("another83");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction84(){
+         var x = document.getElementById("another84");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction85(){
+         var x = document.getElementById("another85");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction86(){
+         var x = document.getElementById("another86");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction87(){
+         var x = document.getElementById("another87");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction88(){
+         var x = document.getElementById("another88");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction89(){
+         var x = document.getElementById("another89");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction90(){
+         var x = document.getElementById("another90");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction91(){
+         var x = document.getElementById("another91");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction92(){
+         var x = document.getElementById("another92");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction93(){
+         var x = document.getElementById("another93");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction94(){
+         var x = document.getElementById("another94");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction95(){
+         var x = document.getElementById("another95");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction96(){
+         var x = document.getElementById("another96");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction97(){
+         var x = document.getElementById("another97");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction98(){
+         var x = document.getElementById("another98");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction99(){
+         var x = document.getElementById("another99");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction100(){
+         var x = document.getElementById("another100");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction101(){
+         var x = document.getElementById("another101");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction102(){
+         var x = document.getElementById("another102");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction103(){
+         var x = document.getElementById("another103");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction104(){
+         var x = document.getElementById("another104");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction105(){
+         var x = document.getElementById("another105");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction106(){
+         var x = document.getElementById("another106");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction107(){
+         var x = document.getElementById("another107");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction108(){
+         var x = document.getElementById("another108");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction109(){
+         var x = document.getElementById("another109");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction110(){
+         var x = document.getElementById("another110");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction111(){
+         var x = document.getElementById("another111");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction112(){
+         var x = document.getElementById("another112");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction113(){
+         var x = document.getElementById("another113");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction114(){
+         var x = document.getElementById("another114");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction115(){
+         var x = document.getElementById("another115");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction116(){
+         var x = document.getElementById("another116");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction117(){
+         var x = document.getElementById("another117");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction118(){
+         var x = document.getElementById("another118");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction119(){
+         var x = document.getElementById("another119");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction120(){
+         var x = document.getElementById("another120");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction121(){
+         var x = document.getElementById("another121");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction122(){
+         var x = document.getElementById("another122");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction123(){
+         var x = document.getElementById("another123");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction124(){
+         var x = document.getElementById("another124");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction125(){
+         var x = document.getElementById("another125");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction126(){
+         var x = document.getElementById("another126");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction127(){
+         var x = document.getElementById("another127");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction128(){
+         var x = document.getElementById("another128");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction129(){
+         var x = document.getElementById("another129");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction130(){
+         var x = document.getElementById("another130");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction131(){
+         var x = document.getElementById("another131");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction132(){
+         var x = document.getElementById("another132");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction133(){
+         var x = document.getElementById("another133");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction134(){
+         var x = document.getElementById("another134");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction135(){
+         var x = document.getElementById("another135");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction136(){
+         var x = document.getElementById("another136");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction137(){
+         var x = document.getElementById("another137");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction138(){
+         var x = document.getElementById("another138");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction139(){
+         var x = document.getElementById("another139");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction140(){
+         var x = document.getElementById("another140");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction141(){
+         var x = document.getElementById("another141");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction142(){
+         var x = document.getElementById("another142");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction143(){
+         var x = document.getElementById("another143");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction144(){
+         var x = document.getElementById("another144");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction145(){
+         var x = document.getElementById("another145");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction146(){
+         var x = document.getElementById("another146");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction147(){
+         var x = document.getElementById("another147");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction148(){
+         var x = document.getElementById("another148");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction149(){
+         var x = document.getElementById("another149");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function mytoFunction150(){
+         var x = document.getElementById("another150");
+         if(x.style.display==="block"){
+            x.style.display="none";
+         }else{
+            x.style.display="block";
+         }
+      }
+
+      function showroim(){
+          var element = document.getElementById('roim');
+
+      if(element.style.visibility == 'hidden') {
+        element.style.visibility = 'visible';
+      }else{
+        element.style.visibility = 'visible'
+      }
+        }
+
+        function noshowroim(){
+          var element = document.getElementById('roim');
+
+      if(element.style.visibility == 'visible') {
+        element.style.visibility = 'hidden';
+      }
+        }
+
+      function showsnr(){
+          var element = document.getElementById('snr');
+
+      if(element.style.visibility == 'hidden') {
+        element.style.visibility = 'visible';
+      }else{
+        element.style.visibility = 'visible'
+      }
+        }
+
+      function noshowsnr(){
+          var element = document.getElementById('snr');
+
+      if(element.style.visibility == 'visible') {
+        element.style.visibility = 'hidden';
+      }
+        }
+
+      function showsnr3(){
+          var element = document.getElementById('snr3');
+
+      if(element.style.visibility == 'hidden') {
+        element.style.visibility = 'visible';
+      }else{
+        element.style.visibility = 'visible'
+      }
+        }
+
+      function noshowsnr3(){
+          var element = document.getElementById('snr3');
+
+      if(element.style.visibility == 'visible') {
+        element.style.visibility = 'hidden';
+      }
+        }
+   </script>
+  </body>
+  </html>
